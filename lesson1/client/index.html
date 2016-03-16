@@ -1,0 +1,37 @@
+<!credit https://www.youtube.com/watch?v=N3cI20xTyZE&index=24&list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl>
+
+<!DOCTYPE html>
+<html ng-app="myModule">
+	<head>
+		<title>
+		</title>
+		<script src="angular.js"></script>
+		<script src="angular-route.js"></script>
+		<link href="index.css" rel="stylesheet">
+		<script src="index.js"></script>
+	</head>
+	
+	<body>
+		<table style="font-family: Arial">
+			<tr>
+				<td colspan="2" class="header">
+					<h1>MEAN stack example page </h1>
+				</td>
+			</tr>
+			<tr>
+				<td class="leftMenu">
+					<a href="#/home">Home</a>
+					<a href="#/employees">Employees </a>
+				</td>
+				<td class="mainContent">
+					<ng-view></ng-view>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="footer">
+					<bb>WebSite footer</bb>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "KerimMySQLDB": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "jdbc:mysql://localhost/mean_test",
+    "database": "mean_test",
+    "password": "hello",
+    "name": "KerimMySQLDB",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

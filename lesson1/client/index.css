@@ -1,0 +1,27 @@
+.header {
+	width: 800px;
+	height: 80px;
+	text-align: center;
+	background-color: #2a4396
+}
+
+.footer {
+	background-color: #2a4396;
+	text-align:center
+}
+
+.leftMenu {
+	height: 500px;
+	background-color: #7cb4c9;
+	width: 150px;
+}
+
+.mainContent {
+	height: 500px;
+	background-color: white
+}
+
+a {
+	display: block;
+	padding: 5px;
+}
