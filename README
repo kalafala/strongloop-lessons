@@ -1,0 +1,38 @@
+Step1:  To initialize project
+----------------------------
+slc loopback 
+<enter lesson1 as destination directory within prompts>
+cd lesson1
+npm install --save loopback-connector-mysql
+slc arc <== configure data source via web-based GUI
+
+Step2: To add fileserver...
+---------------------------
+within lesson1/server/middleware.json add:
+"files": {
+        "loopback#static": {
+                "params": "$!../client"
+        }
+   },
+Assuming that files are being served from lesson1/server/../client/
+
+Step 3: To run nodeJS server instantiated by StrongLoop:
+--------------------------------------------------------
+cd lesson1
+node `pwd`
+
+Step 4: To generate loopback Angular service:
+--------------------------------------------
+cd lesson1
+mkdir -p client/js
+lb-ng server/server.js client/js/lb-services.js
+
+Step 5: To generate documentation for Angular services:
+-------------------------------------------------------
+See grunt-docular.com for information on installing grunt/docular
+See lesson1/Gruntfile.js for configuration necessary to generate docular documentation
+cd lesson1
+grunt
+grunt docularserver
+Point browser to the indicated location in order to view documentation
+
