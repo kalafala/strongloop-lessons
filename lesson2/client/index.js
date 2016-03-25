@@ -42,5 +42,6 @@ var app = angular.module("myModule", ["ngRoute", "lbServices"])
 		//Employees.create({name: "Richard", salary: 5, dateOfBirth: "Jan 1, 2000", gender: "Male" }); 
 		//Employees.create({name: 'Richard', dateofbirth: "whatever", gender: "Male", "salary": 0 }, function(obj1, obj2) {console.log("success!")}, function(err) {console.log(err);}); 
 		Employees.upsert({name: 'Richard', dateofbirth: "whatever", gender: "Male", "salary": 0 }, function(obj1, obj2) {console.log("success!")}, function(err) {console.log(err);}); 
+		$scope.strongLoopResult4=Employees.findById({id: 'Richard'}) 
 
 	});
