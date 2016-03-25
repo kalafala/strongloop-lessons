@@ -6,6 +6,15 @@ cd lesson1
 npm install --save loopback-connector-mysql
 slc arc <== configure data source via web-based GUI
 
+port 3306 is typical
+Need to fill in 
+<url> e.g, jdbc:mysql://localhost/mean_test
+<host> e.g., localhost
+<database> e.g., mean_test
+<port> e.g., 3306
+<connector> e.g., MySQL
+
+
 Step2: To add fileserver...
 ---------------------------
 within lesson1/server/middleware.json add:
@@ -30,9 +39,12 @@ lb-ng server/server.js client/js/lb-services.js
 Step 5: To generate documentation for Angular services:
 -------------------------------------------------------
 See grunt-docular.com for information on installing grunt/docular
-See lesson1/Gruntfile.js for configuration necessary to generate docular documentation
-cd lesson1
-grunt
-grunt docularserver
+	cd lesson1
+	npm install grunt
+	npm install grunt-docular
+	create Gruntfile.js
+		See lesson1/Gruntfile.js for configuration necessary to generate docular documentation
+	grunt
+	grunt docularserver
 Point browser to the indicated location in order to view documentation
 

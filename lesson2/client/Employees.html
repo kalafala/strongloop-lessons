@@ -1,0 +1,23 @@
+<h1>Employees</h1>
+
+<ul>
+	<div ng-repeat="employee in employees">
+	<li ng-if="employee.salary > 1000" >
+		<div > 
+		    {{employee.name}} 
+	        </div>
+	</li>
+	</div>
+	<hr/>
+	<li ng-repeat="employee in strongLoopResult">
+		    {{employee.name}} 
+	</li>
+	<hr/>
+	<li ng-repeat="employee in strongLoopResult2">
+		    {{employee}} 
+	</li>
+	<hr/>
+	<li ng-repeat="employee in strongLoopResult3">
+		    {{employee}} 
+	</li>
+</ul>
