@@ -25,6 +25,13 @@ within lesson1/server/middleware.json add:
    },
 Assuming that files are being served from lesson1/server/../client/
 
+Note for angular local storage:
+
+ "files": {
+      "loopback#static": [{"params": "$!../client"}, {"params": "$!../node_modules/angular-local-storage/dist"}]
+  }
+
+
 Step 3: To run nodeJS server instantiated by StrongLoop:
 --------------------------------------------------------
 cd lesson1
@@ -35,6 +42,12 @@ Step 4: To generate loopback Angular service:
 cd lesson1
 mkdir -p client/js
 lb-ng server/server.js client/js/lb-services.js
+
+
+Step 4a:  Angular local storage
+------------------------------
+cd lesson1
+npm install angular-local-storage --save
 
 Step 5: To generate documentation for Angular services:
 -------------------------------------------------------
@@ -48,3 +61,9 @@ See grunt-docular.com for information on installing grunt/docular
 	grunt docularserver
 Point browser to the indicated location in order to view documentation
 
+Step 6 To modify a data-source,
+------------------------------
+Edit server/datasources.json
+Change id/url/whatever
+If column names change, then update common/models/*.json 
+	Note that the first property element is strong-loop's id for a particular column, however, this can be remapped to another DB column by modifying the "columnName" attribute.
