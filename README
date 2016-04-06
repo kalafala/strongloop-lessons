@@ -32,6 +32,8 @@ Note for angular local storage:
   }
 
 
+Also, If you change the port in your server/config.json file in your StrongLoop service to 0, then linux will assign you an open port.
+
 Step 3: To run nodeJS server instantiated by StrongLoop:
 --------------------------------------------------------
 cd lesson1
