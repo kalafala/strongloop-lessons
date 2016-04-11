@@ -1,13 +1,16 @@
 // Credit https://www.youtube.com/watch?v=hThmoKA9aeU&index=24&list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl#t=189.23102
 
-var app = angular.module("myModule", ["ngRoute", "lbServices"])
-	.config(function($routeProvider) {
-		$routeProvider
-				.when("/home", {
+var app = angular.module("myModule", ["ui.router", "lbServices", "ngMaterial"])
+	.config(function($stateProvider, $urlRouterProvider) {
+		$urlRouterProvider.otherwise('/home');
+		$stateProvider
+				.state("home", {
+						url: '/home',
 						templateUrl:"Home.html",
 						controller:"homeController"
 						})
-				.when("/employees", {
+				.state("employees", {
+						url: '/employees',
 						templateUrl: "Employees.html",
 						controller:"employeesController"
 				})
