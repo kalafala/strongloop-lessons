@@ -1,44 +1,43 @@
 <!credit https://www.youtube.com/watch?v=N3cI20xTyZE&index=24&list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl>
 
 <!DOCTYPE html>
-<html ng-app="myModule">
+<html>
 	<head>
 		<title>
 		</title>
+
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<!-- Angular Material style sheet -->
+  		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+
+
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
   		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
   		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.js"></script>
   		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.js"></script>
   		<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.js"></script>
-		<link href="index.css" rel="stylesheet">
 		<script src="index.js"></script>
 		<script src="js/lb-services.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-resource.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-resource.js"></script>
 	</head>
 	
 	<body>
-		<table style="font-family: Arial">
-			<tr>
-				<td colspan="2" class="header">
-					<h1>MEAN stack example page </h1>
-				</td>
-			</tr>
-			<tr>
-				<td class="leftMenu">
-                                        <a ui-sref="home">Home</a>
-                                        <a ui-sref="employees">Employees </a>
-                                </td>
+		<div ng-app="myModule" ng-controller="tabController" ng-cloak>
+  		<md-content>
+		<md-toolbar>
+    			<h2 class="md-toolbar-tools">
+      				<span>Example Page</span>
+    			</h2>
+  		</md-toolbar>
+  		<md-tabs md-stretch-tabs 
+           		md-selected="selectedIndex">
+     			<md-tab label="Home"></md-tab> 
+     			<md-tab label="Employees"></md-tab>
+  		</md-tabs>
 
-				<td class="mainContent">
-					<ui-view></ui-view>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2" class="footer">
-					<bb>WebSite footer</bb>
-				</td>
-			</tr>
-		</table>
+  		<div id="content" ui-view flex> </div>
+		</md-content>
+		</div>
 	</body>
 </html>

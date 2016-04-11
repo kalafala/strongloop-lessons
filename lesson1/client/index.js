@@ -15,6 +15,20 @@ var app = angular.module("myModule", ["ui.router", "lbServices", "ngMaterial"])
 						controller:"employeesController"
 				})
 	})
+	.controller("tabController", function($scope, $location) {
+		$scope.selectedIndex = 0;
+
+        	$scope.$watch('selectedIndex', function(current, old) {
+            	switch (current) {
+                case 0:
+                    $location.url("/home");
+                    break;
+                case 1:
+                    $location.url("/employees");
+                    break;
+            	}	
+        	});
+	})
 	.controller("homeController", function($scope) {
 			$scope.message = "Welcome Kerim";	
 	})
